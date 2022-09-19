@@ -1,0 +1,123 @@
+.product-card{
+    padding: 12px;    
+    width: fit-content;
+    position: relative;
+    border-radius: 12px;
+    max-width: fit-content;
+    margin: 0px auto;
+    
+    .sponsored{        
+        &::before{
+            content: 'Brand';
+            color: var(--secondary-orange);
+            padding: 0px;
+           
+        }
+        position: absolute;
+        top:12px;     
+        background-color: var(--primary-black);
+        color: white;
+        padding: 4px 12px;
+        border-top-left-radius: 4px;
+        border-bottom-right-radius: 8px;   
+    }
+
+    .product-img{
+        width: 100%;        
+        overflow: hidden;
+        border-radius: 4px;
+        img{
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .title{
+        font-size: 1.1em;
+        font-weight: 500;
+        margin-top: 4px;        
+        width: 224px;
+        p{
+            
+            text-overflow: clip;
+            padding: 0px 4px;
+            margin-bottom: 0px;
+            line-height: normal;
+        }
+
+        span{
+            font-weight: bold;
+        }
+    }
+
+    .rating{
+        color: var(--secondary-orange);
+        display:flex;
+        flex-direction: row;
+        column-gap: 12px;
+
+        span{
+            font-size: 1.2em;
+        }
+
+        p{
+            font-size: 14px;
+            margin: 0px;
+            padding: 0px;
+            color: var(--primary-black);
+        }
+    }
+
+    .product-price{
+        display: flex;
+        flex-direction: row;
+
+        .current-price{           
+            p{
+                font-size: 1.5em;
+                font-weight: bold;
+                &::after{
+                    content: '00';
+                    font-weight: 500;
+                    position: relative;
+                    font-size: 16px;
+                    top: -8px;
+                    margin-left: 2px;
+                }
+            }
+            .discounted{
+                color: var(--blue-accent);
+            }
+        }
+        .old-price{           
+            margin: 0px;            
+            display: flex;
+            align-items: flex-end;
+            
+            p{
+                color: grey;
+                margin-left: 8px;
+                text-decoration: line-through;
+
+                &::after{
+                    content: '00';
+                    text-decoration: none;
+                    font-weight: 500;
+                    position: relative;
+                    font-size: 8px;
+                    top: -8px;
+                    margin-left: 2px;
+                }
+            }
+        }
+    }
+
+    .product-actions{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .btn-cart{
+            font-size: 0.9em;
+        }
+    }
+}

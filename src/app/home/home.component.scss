@@ -1,0 +1,31 @@
+section{
+    margin-top:24px;
+    margin-bottom: 42px;
+    display: block;
+    .section-title{
+        
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        @media (max-width:576px){
+            flex-direction: column; 
+           
+        }
+        p{
+            font-size: 1.6em;
+        }
+        button{
+            color: var(--primary-orange);
+            font-weight: bold;
+            height: 42px;
+        }
+    }
+}
+
+.main-products{
+    margin: 0px;
+    padding: 0px;
+}

@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root{
+    --primary-black : #141B24;
+    --primary-orange : #FF9900;
+    --primary-white : #EEF3F9;
+    --secondary-orange : #FFB700;
+    --blue-accent : #00A8E1;
+    
+}
+
+* {
+    font-size: 100%;
+    font-family: 'Roboto';
+    
+   }
+
+.container-fluid{
+    padding: 0px;
+}
+
+.btn-primary{
+    background-color: var(--secondary-orange);
+    border: none;
+    &:hover{
+        background-color: var(--primary-orange);
+    }
+}
+

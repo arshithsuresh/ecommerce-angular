@@ -1,0 +1,32 @@
+<div class="product-card">
+    <div class="sponsored" [ngClass]="{'d-none':!product.sponsored}">
+        Sponsored
+    </div>
+    <div class="product-img">
+        <img [src]="product.img" alt="">
+    </div>
+    <div class="title">
+        <p><span>{{product.brand}}</span> - {{product.title}}</p>
+    </div>
+    
+    <div class="rating">
+        <div class="rating-stars">            
+            <span class="material-icons" *ngFor="let index of createRange(product.rating)"> star</span>
+            <span class="material-icons" *ngIf="product.rating<5">star_half</span>
+            <span class="material-icons" *ngFor="let index of createRange(5-product.rating)">star_border</span>
+        </div>
+        <p class="count">{{product.totalRatings}}</p>
+    </div>
+    <div class="product-price ">
+        <div class="current-price ">
+            <p [ngClass]="{'discounted': product.discountPrice!=undefined}"> <span class="currency"></span> {{product.currentPrice}}</p>            
+        </div>
+        <div class="old-price" [ngClass]="{'d-none': product.discountPrice==undefined}">
+            <p> <span class="currency"></span> {{product.discountPrice}}</p>
+        </div>
+    </div>
+    <div class="product-actions">
+        <button class="btn btn-primary rounded-pill">Buy Now</button>
+        <button class="btn btn-cart rounded-pill">Add to Cart</button>
+    </div>
+</div>
