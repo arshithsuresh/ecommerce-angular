@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ProductCardComponent } from './shared/product-card/product-card.component';
 import { ProductCarouselComponent } from './product-carousel/product-carousel.component';
+import { ProductOffersComponent } from './product-offers/product-offers.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ProductCarouselComponent } from './product-carousel/product-carousel.co
     LoginComponent,
     ProductCardComponent,
     ProductCarouselComponent,
+    ProductOffersComponent,
     
   ],
   imports: [

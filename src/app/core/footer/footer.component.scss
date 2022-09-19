@@ -1,0 +1,40 @@
+.footer{
+    background-color: var(--primary-black);
+    color: white;
+    padding: 24px 12px;
+    .brand-logo{
+        font-size: 2em;
+        font-weight: bold;
+    }
+    .footer-content{
+        .footer-content-navs{
+            h5{
+                font-weight: bold;
+            }
+        }
+        ul{
+            list-style: none;
+            list-style-position: outside;
+            text-align: start;
+            padding: 0px;
+            margin: 0px;
+            li{
+                display: block;
+                padding: 4px 0px;
+            }
+        }
+    }
+    
+    ul{
+        list-style: none;        
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        li{
+            display: inline-block; 
+            padding: 12px 12px;        
+        }
+    }
+
+    
+}

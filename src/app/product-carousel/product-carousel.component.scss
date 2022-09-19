@@ -28,9 +28,9 @@
         }
         .content{
             position: absolute;
-            top: 40%;
+            top: 50%;
             right: 0px;
-            margin-right: 12%;
+            margin-right: 8%;
             
             padding-right: 42px;
             max-width: 450px;
@@ -49,16 +49,18 @@
             }
             .title{
                 p{
+                    line-height: 1em;
                     font-size: 3em;
                     font-weight: bold;
                     margin: 0px;
-                    color: var(--primary-orange);
+                    color: var(--primary-white);
+                    text-shadow: 0px 0px 12px rgba($color: #000000, $alpha: 0.4);
                 }
             }
             .sub-title{
                 p{
                     margin:0px;
-                    margin-top: -12px;
+                    margin-top: 12px;
                     font-size: 1.4em;
                 }
             }

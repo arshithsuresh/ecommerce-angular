@@ -1,0 +1,45 @@
+.row{
+    margin: 64px 24px;
+    
+    .product-offers{
+        margin: 12px;
+        position: relative;
+        .bg-image{
+            width: 100%;
+            height: 320px;
+            background-color: var(--primary-white);
+            position: relative;
+            
+            img{
+                padding: 14px;
+                position: absolute;
+                right: 12px;
+                bottom: 12px;
+                width: 50%;
+            }
+        }
+
+        .content{
+            z-index: 10;
+            position: absolute;
+            .title{
+                width: 80%;
+                padding: 12px 24px;
+                font-size: 2em;
+                font-weight: bold;
+                line-height: 1.2em;
+            }
+            .action{
+                margin-left: 24px;
+                border: none;
+                background-color: transparent;
+                color: var(--primary-orange);
+                font-weight: bold;
+                height: 42px;
+            }
+        }
+    }
+    
+
+    
+}
