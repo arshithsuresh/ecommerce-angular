@@ -12,7 +12,7 @@
     <div class="rating">
         <div class="rating-stars">            
             <span class="material-icons" *ngFor="let index of createRange(product.rating)"> star</span>
-            <span class="material-icons" *ngIf="product.rating<5">star_half</span>
+            <span class="material-icons" *ngIf="halfStarVisibility()">star_half</span>
             <span class="material-icons" *ngFor="let index of createRange(5-product.rating)">star_border</span>
         </div>
         <p class="count">{{product.totalRatings}}</p>
@@ -27,6 +27,6 @@
     </div>
     <div class="product-actions">
         <button class="btn btn-primary rounded-pill">Buy Now</button>
-        <button class="btn btn-cart rounded-pill">Add to Cart</button>
+        <button class="btn btn-cart rounded-pill" (click)="onAddToCart()">Add to Cart</button>
     </div>
 </div>

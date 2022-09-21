@@ -14,16 +14,15 @@ export class Product {
 
     public static getMockProduct():Product{
         return new Product(
-            "abc123xyz",
-            "Stylish Bag Very Very Very Long",            
-            4.2,
-            133,
-            "Vinta",
-            1499,
-            true,            
-            4,
-            "assets/product/bag/card.jpg",
-            2000
+            "-1",
+            "Product Not Available",            
+            0, //Rating
+            0, //No. Rating
+            "",
+            0, // Rate
+            false,            
+            4, //Stock
+            "assets/img/placeholders/product.png"
         )
     }
 }

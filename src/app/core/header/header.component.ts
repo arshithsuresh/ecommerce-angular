@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../cart-service/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   accountDropdown:boolean = false;
+  cartItemCount:number=0;
 
-  constructor() { }
+  constructor(private cartService:CartService) { }
 
   toggleDropdown():void{
     this.accountDropdown = !this.accountDropdown;
@@ -17,6 +19,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.cartService.cartUpdated.subscribe((cartItems)=>this.cartItemCount=cartItems.length);
   }
 
 }

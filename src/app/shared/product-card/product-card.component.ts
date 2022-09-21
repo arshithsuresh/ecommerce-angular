@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { CartService } from 'src/app/core/cart-service/cart.service';
 import { Product } from './product';
 
 
@@ -9,12 +10,16 @@ import { Product } from './product';
 })
 export class ProductCardComponent implements OnInit {
 
-  product:Product;
-  constructor() { 
+  @Input('data') product:Product;
+  constructor(private cartService:CartService) { 
     this.product=Product.getMockProduct();
   }
 
   ngOnInit(): void {
+  }
+
+  halfStarVisibility=()=>{
+    return !(Math.floor(this.product.rating)==this.product.rating) && this.product.rating<5;
   }
 
   createRange(range:number){
@@ -23,4 +28,7 @@ export class ProductCardComponent implements OnInit {
       .map((n, index) => index + 1);
   }
 
+  onAddToCart():void{
+    this.cartService.addItemToCart(this.product.productID);
+  }
 }

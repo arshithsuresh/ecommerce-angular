@@ -1,0 +1,56 @@
+{
+      "initdata":{
+      "featuredproduct":[
+        {
+          "productID":"pd00_001",
+          "title":"Stylish Bag",
+          "rating":"4.2",
+          "totalRatings":"32",
+          "brand":"Vitan",
+          "currentPrice":"1499",
+          "sponsored":"true",
+          "stock":"4",
+          "img":"assets/product/bag/card.jpg"          
+        },
+        {
+          "productID":"pd00_002",
+          "title":"Air Jordans - Limited",
+          "rating":"4.5",
+          "totalRatings":"1423",
+          "brand":"Nike",
+          "currentPrice":"6999",
+          "sponsored":"true",
+          "stock":"3",
+          "img":"assets/product/airjordan/card.png",
+          "discountPrice":""
+        },
+        {
+          "productID":"pd00_003",
+          "title":"Playstation 5 - White",
+          "rating":"4.7",
+          "totalRatings":"2174",
+          "brand":"Sony",
+          "currentPrice":"38999",
+          "sponsored":"true",
+          "stock":"12",
+          "img":"assets/product/ps5/card.jpg",
+          "discountPrice":"34999"
+        },
+        {
+          "productID":"pd00_004",
+          "title":"Naruto Bomber Jacket",
+          "rating":"3.5",
+          "totalRatings":"429",
+          "brand":"LeafCloths",
+          "currentPrice":"1499",
+          "sponsored":"true",
+          "stock":"6",
+          "img":"assets/product/narutojacket/card.jpg",
+          "discountPrice":"1299"
+        }
+      ],
+      "trendproducts":[
+
+      ]
+    }
+}

@@ -1,11 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { ProductCatalogComponent } from './product-catalog/product-catalog.component';
+import { ProductPageComponent } from './product-page/product-page.component';
+import { RegisterPageComponent } from './register-page/register-page.component';
 
 const routes: Routes = [
   {
     path:"",
     component: HomeComponent
+  },
+  {
+    path:"register",
+    component: RegisterPageComponent
+  },
+  {
+    path: "catalog",
+    component: ProductCatalogComponent
+  },
+  {
+    path:"product/:pid",
+    component: ProductPageComponent
   }
 ];
 
