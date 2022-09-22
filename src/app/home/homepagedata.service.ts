@@ -1,32 +1,54 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 import { map } from 'rxjs';
 import { Product } from '../shared/product-card/product';
+
+
+interface prodct{
+  test:string;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class HomepageDataService {
 
-  shoppingTrendProducts: Product[]=[];
-  featuredProduct: Product[]=[];
-  browsingHistory: Product[]=[];
+  @Output() homepageDataChanged:EventEmitter<boolean> = new EventEmitter();
 
-  constructor(private httpClient:HttpClient) {
-    
+  shoppingTrendProducts: Product[]=[];
+  featuredProducts: Product[]=[];
+  browsingHistorys: Product[]=[];
+
+  constructor(private httpClient:HttpClient) {    
   }
 
   getInitData(){
-    this.httpClient.get("http://localhost:3000/initdata")
-    .pipe(map((responseData:any)=>{
-      //const f_products: Product[];
-      //f_products = 
-      console.log(responseData["featuredproduct"]);
-      return responseData;
+
+    this.httpClient.get<{[key:string]: Product[]}>("http://localhost:3000/initdata")
+    .pipe(map((responseData)=>{
+      let fPosts:Product[] = [];
+      let tPosts:Product[] = [];
+      for(const key in responseData["featuredproduct"])
+      {        
+        if(responseData["featuredproduct"].hasOwnProperty(key))
+        fPosts = responseData["featuredproduct"];
+      }
+
+      for(const key in responseData["trendproducts"])
+      {
+        if(responseData["trendproducts"].hasOwnProperty(key))
+        tPosts = responseData["trendproducts"];
+      }
+      return {
+        "featuredproduct" : fPosts,
+        "trendproducts" : tPosts
+      }      
     }))
     .subscribe(
-      (responseData:)=>{
-        //console.log(responseData["featuredproduct"]);
+      (responseData)=>{
+        this.featuredProducts = responseData["featuredproduct"];
+        this.shoppingTrendProducts = responseData["trendproducts"];
+        this.homepageDataChanged.emit(true);
       },      
     );
   }

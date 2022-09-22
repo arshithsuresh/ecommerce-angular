@@ -13,19 +13,9 @@
             <button class="btn action"> View All</button>
         </div>
         <div class="row">
-            <div class="col">
-                <app-product-card></app-product-card>
+            <div class="col" *ngFor="let product of shoppingTrendProducts;">
+                <app-product-card [data]="product" ></app-product-card>
             </div>
-            <div class="col">
-                <app-product-card></app-product-card>
-            </div>
-            <div class="col">
-                <app-product-card></app-product-card>
-            </div>
-            <div class="col">
-                <app-product-card></app-product-card>
-            </div>
-            
         </div>
     </section>
 
@@ -41,19 +31,9 @@
             <button class="btn action"> View All</button>
         </div>
         <div class="row">
-            <div class="col">
-                <app-product-card></app-product-card>
+            <div class="col" *ngFor="let product of featuredProducts;">
+                <app-product-card [data]="product" ></app-product-card>
             </div>
-            <div class="col">
-                <app-product-card></app-product-card>
-            </div>
-            <div class="col">
-                <app-product-card></app-product-card>
-            </div>
-            <div class="col">
-                <app-product-card></app-product-card>
-            </div>
-            
         </div>
     </section>
 

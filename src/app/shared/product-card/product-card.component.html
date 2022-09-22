@@ -19,10 +19,15 @@
     </div>
     <div class="product-price ">
         <div class="current-price ">
-            <p [ngClass]="{'discounted': product.discountPrice!=undefined}"> <span class="currency"></span> {{product.currentPrice}}</p>            
+            <p [ngClass]="{'discounted': product.discountPrice!=undefined}"> 
+                <span class="currency"></span> 
+                {{product.discountPrice==undefined?
+                product.currentPrice:product.discountPrice}}</p>            
         </div>
         <div class="old-price" [ngClass]="{'d-none': product.discountPrice==undefined}">
-            <p> <span class="currency"></span> {{product.discountPrice}}</p>
+            <p> <span class="currency"></span>
+                {{product.discountPrice!=undefined?
+                product.currentPrice:product.discountPrice}}</p>
         </div>
     </div>
     <div class="product-actions">
