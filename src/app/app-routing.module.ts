@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CartPageComponent } from './cart-page/cart-page.component';
 import { HomeComponent } from './home/home.component';
 import { ProductCatalogComponent } from './product-catalog/product-catalog.component';
 import { ProductPageComponent } from './product-page/product-page.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path:"product/:pid",
     component: ProductPageComponent
+  },
+  {
+    path:"cart",
+    component: CartPageComponent
   }
 ];
 

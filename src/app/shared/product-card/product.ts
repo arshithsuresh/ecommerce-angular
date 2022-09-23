@@ -18,11 +18,12 @@ export class Product {
             "Product Not Available",            
             0, //Rating
             0, //No. Rating
-            "",
+            "Brand",
             0, // Rate
-            false,            
+            true,            
             4, //Stock
-            "assets/img/placeholders/product.png"
+            //"assets/img/placeholders/product.png"
+            "assets/product/ps5/card.jpg"
         )
     }
 }

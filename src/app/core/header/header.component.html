@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row flex-row  w-100">
                 <div class="col-lg-3 col-md-4 col-sm-3 left-nav">
-                    <a href="" class="navbar-brand">
+                    <a [routerLink]="['']" class="navbar-brand">
                         BrandABC
                     </a>
                 </div>
@@ -42,7 +42,7 @@
                         </div>
                         
                     </div>
-                    <div class="cart">
+                    <div class="cart"  [routerLink]="['/cart']">
                         <p class="cart-count">{{cartItemCount}}</p>
                         <div class="cart-icon">
                             <span class="material-icons">

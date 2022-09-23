@@ -1,11 +1,11 @@
-<div class="product-card">
+<div class="product-card" >
     <div class="sponsored" [ngClass]="{'d-none':!product.sponsored}">
         Sponsored
     </div>
-    <div class="product-img">
+    <div class="product-img" [routerLink]="['product',product.productID]">
         <img [src]="product.img" alt="">
     </div>
-    <div class="title">
+    <div class="title" [routerLink]="['product',product.productID]">
         <p><span>{{product.brand}}</span> - {{product.title}}</p>
     </div>
     

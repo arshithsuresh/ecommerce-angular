@@ -1,0 +1,68 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="cart-content-title">
+                <p>Items in your cart.</p>
+            </div>
+            <div class="cart-items">
+                <div class="cart-empty" *ngIf="items.length==0">
+                    <p>Cart is empty! Add items to card.</p>
+                </div>
+                <app-product-long-card *ngFor="let item of items"></app-product-long-card>                
+            </div>
+            
+        </div>
+        <div class="col-md-4">
+            <div class="summary-title">
+                <p>Order Summary</p>
+            </div>
+            <div class="order-summary">
+                <div class="item-details">
+                    <p class="item-name">AIR MAX </p>
+                    <p class="item-price"> <span class="currency">$</span>72</p>
+                </div>
+                <hr>
+                <div class="order-total">
+                    <div class="left-caption">
+                        <p> Order total <span>(2 items):</span></p>
+                    </div>
+                    <div class="total">
+                        <p> <span class="currency">$</span>32</p>
+                    </div>                    
+                </div>
+                <hr>
+                <div class="delivery-options">
+                    <p class="title">Choose delivery type</p>
+                    <ul>
+                        <li>
+                            <div class="type">
+                                <input type="radio" name="delivery" id="delivery" value="0" checked> 2 day delivery
+                            </div>
+                            <div class="cost">
+                                <p><span class="currency"></span> 6</p>
+                            </div>                            
+                        </li>
+                        <li>
+                            <div class="type">
+                                <input type="radio" name="delivery" id="delivery" value="0" checked> No Rush delivery
+                            </div>
+                            <div class="cost">
+                                <p>Free</p>
+                            </div>   
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-primary w-100">
+                        Proceed to checkout
+                    </button>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

@@ -10,17 +10,7 @@ import { HomepageDataService } from './homepagedata.service';
 })
 export class HomeComponent implements OnInit {
 
-  shoppingTrendProducts: Product[]=[ new Product(
-    "-1",
-    "Product Not Available",            
-    0, //Rating
-    0, //No. Rating
-    "",
-    0, // Rate
-    false,            
-    4, //Stock
-    "assets/img/placeholders/product.png"
-)];
+  shoppingTrendProducts: Product[]=[];
   featuredProducts: Product[]=[];
   browsingHistorys: Product[]=[];
 

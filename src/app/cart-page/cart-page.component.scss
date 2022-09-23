@@ -1,0 +1,95 @@
+.container{
+
+    margin-top: 42px;
+    .cart-content-title{
+        width: 100%;
+        p{
+            font-size: 1.3em;
+            margin: 8px 0px;
+            font-weight: bold;
+        }
+        border-bottom: solid 2px var(--primary-white);
+    }
+    .cart-items{
+        .cart-empty{
+            width: 100%;
+            padding-top: 100px;
+            text-align: center;
+        }
+    }
+    .summary-title{
+        width: 100%;
+        
+            p{
+                margin: 8px 0px;
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+        }
+    .order-summary{
+        background-color: var(--primary-white);
+        padding: 36px 18px;
+        .currency{
+            margin-right: 4px;
+            font-size: 0.7em;
+            font-weight: 100;
+        }
+        .actions{
+            margin-top: 24px;
+            button{
+                height: 42px;
+            }
+        }
+        .item-details{
+            
+            display: flex;
+            flex-direction: row;  
+            justify-content: space-between;
+            
+            .item-name{
+                width: 70%;
+                word-wrap: break-word;
+                
+            }
+            .item-price{                
+                font-weight: bold;
+                font-size: 1.2em;
+                text-align: right;
+                width: 30%;
+            }
+        }      
+        
+        .order-total{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .left-caption{
+
+            }
+            .total{
+                p{
+                    font-weight: bold;
+                    font-size: 1.6em;                    
+                }
+            }
+        }
+        .delivery-options{
+            p{
+                margin: 4px 0px;
+            }
+            .title{
+                font-weight: 900;
+                margin-bottom: 4px;
+            }
+            ul{
+                list-style-type: none;
+                li{
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+    
+    }
+    
+}

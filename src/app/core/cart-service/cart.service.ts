@@ -14,13 +14,12 @@ export class CartService {
 
   private cartItems: String[]=[];
 
-  constructor() { }
+  constructor() {
+    console.log("Car Service initialized!")
+  }
 
   getCartCount():number{
-    let count=this.cartItems.length;
-    // this.cartItems.forEach((item,index)=>{
-    //   count+=item.itemCount;
-    // })
+    let count=this.cartItems.length;    
     return count;
   }
 

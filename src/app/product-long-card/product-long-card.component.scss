@@ -1,0 +1,111 @@
+.product-long-card{
+    padding: 12px 42px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    column-gap: 24px;    
+    margin: 8px 0px;
+    border-bottom: 2px solid var(--primary-white);       
+    .sponsored{        
+        &::before{
+            content: 'Brand';
+            color: var(--secondary-orange);
+            padding: 0px;
+           
+        } 
+        width: fit-content;         
+        background-color: var(--primary-black);
+        color: white;
+        padding: 4px 12px;
+        border-top-left-radius: 4px;
+        border-bottom-right-radius: 8px;   
+    }
+
+    .cart-actions{
+        margin-top: 12px;
+        .btn-cart-action{
+            color: var(--primary-orange);
+            font-weight: bold;
+        }
+    }
+
+    .product-img{                
+        .card-img{
+            max-width: 200px;
+            width: 100%;
+            overflow: hidden;
+            img{
+                max-width: 200px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .product-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .title{
+            p{
+                font-size: 1.3em;
+                span{
+                    font-weight: bold;
+                }
+                margin: 0px;
+            }
+        }
+        .rating{
+            display: flex;
+            column-gap: 12px;
+            .rating-stars{
+                color: var(--secondary-orange);
+            }
+        }
+
+        .product-price{
+            display: flex;
+            flex-direction: row;
+    
+            .current-price{           
+                p{
+                    font-size: 1.5em;
+                    font-weight: bold;
+                    &::after{
+                        content: '00';
+                        font-weight: 500;
+                        position: relative;
+                        font-size: 16px;
+                        top: -8px;
+                        margin-left: 2px;
+                    }
+                }
+                .discounted{
+                    color: var(--blue-accent);
+                }
+            }
+            .old-price{           
+                margin: 0px;            
+                display: flex;
+                align-items: flex-end;
+                
+                p{
+                    color: grey;
+                    margin-left: 8px;
+                    text-decoration: line-through;
+    
+                    &::after{
+                        content: '00';
+                        text-decoration: none;
+                        font-weight: 500;
+                        position: relative;
+                        font-size: 8px;
+                        top: -8px;
+                        margin-left: 2px;
+                    }
+                }
+            }
+        }
+    }
+}

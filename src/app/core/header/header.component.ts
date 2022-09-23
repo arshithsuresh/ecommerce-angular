@@ -11,7 +11,9 @@ export class HeaderComponent implements OnInit {
   accountDropdown:boolean = false;
   cartItemCount:number=0;
 
-  constructor(private cartService:CartService) { }
+  constructor(private cartService:CartService) { 
+    
+  }
 
   toggleDropdown():void{
     this.accountDropdown = !this.accountDropdown;
@@ -19,6 +21,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.cartItemCount = this.cartService.getCartCount();
     this.cartService.cartUpdated.subscribe((cartItems)=>this.cartItemCount=cartItems.length);
   }
 
