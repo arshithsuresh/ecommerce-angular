@@ -19,11 +19,12 @@ export class Product {
             0, //Rating
             0, //No. Rating
             "Brand",
-            0, // Rate
+            1499, // Rate
             true,            
             4, //Stock
             //"assets/img/placeholders/product.png"
-            "assets/product/ps5/card.jpg"
+            "assets/product/ps5/card.jpg",
+            1000
         )
     }
 }

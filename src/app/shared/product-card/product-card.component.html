@@ -8,15 +8,8 @@
     <div class="title" [routerLink]="['product',product.productID]">
         <p><span>{{product.brand}}</span> - {{product.title}}</p>
     </div>
+    <app-rating [rating]="product.rating"><p class="count">{{product.totalRatings}}</p></app-rating>
     
-    <div class="rating">
-        <div class="rating-stars">            
-            <span class="material-icons" *ngFor="let index of createRange(product.rating)"> star</span>
-            <span class="material-icons" *ngIf="halfStarVisibility()">star_half</span>
-            <span class="material-icons" *ngFor="let index of createRange(5-product.rating)">star_border</span>
-        </div>
-        <p class="count">{{product.totalRatings}}</p>
-    </div>
     <div class="product-price ">
         <div class="current-price ">
             <p [ngClass]="{'discounted': product.discountPrice!=undefined}"> 

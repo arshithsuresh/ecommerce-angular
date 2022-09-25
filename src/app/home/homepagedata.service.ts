@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { EventEmitter, Injectable, Output } from '@angular/core';
+import { EventEmitter, Injectable, Output, OnInit} from '@angular/core';
 import { map } from 'rxjs';
+import { CartService } from '../core/cart-service/cart.service';
 import { Product } from '../shared/product-card/product';
 
 
@@ -11,7 +12,7 @@ interface prodct{
 @Injectable({
   providedIn: 'root'
 })
-export class HomepageDataService {
+export class HomepageDataService implements OnInit {
 
   @Output() homepageDataChanged:EventEmitter<boolean> = new EventEmitter();
 
@@ -19,7 +20,11 @@ export class HomepageDataService {
   featuredProducts: Product[]=[];
   browsingHistorys: Product[]=[];
 
-  constructor(private httpClient:HttpClient) {    
+  constructor(private httpClient:HttpClient, private cartService:CartService) {
+    
+  }
+
+  ngOnInit(): void {    
   }
 
   getInitData(){
@@ -49,7 +54,10 @@ export class HomepageDataService {
         this.featuredProducts = responseData["featuredproduct"];
         this.shoppingTrendProducts = responseData["trendproducts"];
         this.homepageDataChanged.emit(true);
-      },      
+      },
+      (error)=>{
+        alert("Unable to fetch data!")
+      }    
     );
   }
 }

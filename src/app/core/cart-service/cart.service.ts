@@ -16,6 +16,11 @@ export class CartService {
 
   constructor() {
     console.log("Car Service initialized!")
+    let localCartItems = window.localStorage.getItem("cart");
+    if(localCartItems!=undefined)
+    {
+      this.cartItems = JSON.parse(localCartItems);
+    }
   }
 
   getCartCount():number{
@@ -34,18 +39,23 @@ export class CartService {
       return;
     }    
     this.cartItems.push(itemId);
+    window.localStorage.setItem("cart",JSON.stringify(this.cartItems))
     this.cartUpdated.emit(this.cartItems.slice());
   }
 
   removeItemFromCart(itemId:String):void{
     var index:any=-1;
-    index = this.cartItems.find(item=> item == itemId);
+    index = this.cartItems.indexOf(itemId);
     if(index != undefined)
-    {
+    {      
       this.cartItems.splice(index,1);
+      window.localStorage.setItem("cart",JSON.stringify(this.cartItems))
       this.cartUpdated.emit(this.cartItems.slice());
-    }
-    alert("test");
+    } 
+    else
+    {
+      alert("Could remove item from cart!");
+    }   
   }
 
 }

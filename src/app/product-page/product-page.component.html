@@ -1,2 +1,224 @@
 <app-header></app-header>
+
+<div class="container product-content">
+    <div class="row top-nav justify-content-md-between">
+        <div class="col-md-6">
+            <div class="category-links">
+                <ul>
+                    <li>Home</li>
+                    <li>Category</li>
+                    <li>Fashion</li>
+                    <li>Sneakers</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="action">
+                <button><< Back to Results</button>
+            </div>
+        </div>        
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 images">
+            <div class="product-main-image">
+                <img src="assets/product/bag/full.jpg" alt="">
+            </div>
+            <div class="product-images">
+                <div class="image-icon">
+                    <img src="assets/product/bag/card.jpg" alt="">
+                </div>
+                <div class="image-icon">
+                    <img src="assets/product/bag/card.jpg" alt="">
+                </div>
+                <div class="image-icon">
+                    <img src="assets/product/bag/card.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 details">
+            <div class="brand-title">
+                <p>By <span>Nike</span></p>
+            </div>
+            <div class="product-title">
+                <h3>Nike High Dunks</h3>
+            </div>
+            <app-rating class="rating" [rating]="4.4">
+                <span>120 ratings</span>                
+            </app-rating>
+
+            <div class="price-tag">
+                <div class="product-price">
+                    <div class="current-price ">
+                        <p [ngClass]="{'discounted': product.discountPrice!=undefined}"> 
+                            <span class="currency">Rs.</span> 
+                            {{product.discountPrice==undefined?
+                            product.currentPrice:product.discountPrice}}</p>            
+                    </div>
+                    <div class="old-price" [ngClass]="{'d-none': product.discountPrice==undefined}">
+                        <p> <span class="currency">Rs.</span>
+                            {{product.discountPrice!=undefined?
+                            product.currentPrice:product.discountPrice}}</p>
+                    </div>
+                </div>
+                <div class="stock out">                    
+                </div>
+            </div>
+            
+            <div class="size-selection">               
+                <div class="size">
+                    <button >UK 6</button>
+                </div>
+                <div class="size">
+                    <button >UK 7</button>
+                </div>
+                <div class="size">
+                    <button >UK 8</button>
+                </div>
+                <div class="size">
+                    <button >UK 9</button>
+                </div>
+                <div class="size">
+                    <button >UK 10</button>
+                </div>
+                <div class="size">
+                    <button >UK 11</button>
+                </div>
+                <div class="size">
+                    <button >UK 12</button>
+                </div>
+                
+            </div>
+            <div class="description">
+                <p>
+                    The Air Jordan 1 Mid brings full-court style and premium comfort to an iconic look. Its Air-Sole unit cushions play on the hardwood, while the padded collar gives you a supportive feel.
+                    Colour Shown: Black/White/Particle Grey Style: BQ6472-007
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row justify-content-md-center ratings-reviews">
+        <div class="col-md-12">
+            <h3>Ratings & Reviews</h3>
+        </div>
+        <div class="col-md-3">
+            <div class="rating-view">
+                <div class="rating-value">
+                   <p>4.2</p>
+                </div>
+                <div class="stars-total">
+                    <app-rating [rating]="4.2"></app-rating>
+                    <p>7,546 ratings</p>
+                </div>
+            </div>
+            <div class="rating-divided">
+                <p class="rating-desc">4.2 of 5 </p>
+                <div class="star-bar">
+                    <p>5 stars</p>
+                    <div class="rating-bar">
+                        <span></span>
+                    </div>
+                    <p>90%</p>
+                </div>
+                <div class="star-bar">
+                    <p>4 stars</p>
+                    <div class="rating-bar">
+                        <span [style.width]="'6%'"></span>
+                    </div>
+                    <p>6%</p>
+                </div>
+                <div class="star-bar" >
+                    <p>3 stars</p>
+                    <div class="rating-bar">
+                        <span [style.width]="'4%'"></span>
+                    </div>
+                    <p>4%</p>
+                </div>
+                <div class="star-bar">
+                    <p>2 stars</p>
+                    <div class="rating-bar">
+                        <span [style.width]="'0%'"></span>
+                    </div>
+                    <p>0%</p>
+                </div>
+                <div class="star-bar">
+                    <p>1 stars</p>
+                    <div class="rating-bar">
+                        <span [style.width]="'0%'"></span>
+                    </div>
+                    <p>0%</p>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="row rating-description">
+                <div class="col-md-3">
+                    <div class="user-profile">
+                        <div class="image">
+                            <img src="assets/img/profile/naruto.png" alt="">
+                        </div>
+                        <div class="user-details">
+                            <p>John Lucas</p>
+                            <app-rating [rating]="4"></app-rating>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md 9">
+                    <p class="review-text">It was pretty amazing to unbox this astonishing pair of shoes, they are really treat to eyes that too in an affordable price. Just keep in mind buy one size smaller than your normal size ..Believe me you would never regret after this purchase </p>
+                    <p class="review-date">12:12 - Apr 14, 2022</p>
+                </div>
+            </div>
+            <div class="row rating-description">
+                <div class="col-md-3">
+                    <div class="user-profile">
+                        <div class="image">
+                            <img src="assets/img/profile/naruto.png" alt="">
+                        </div>
+                        <div class="user-details">
+                            <p>John Lucas</p>
+                            <app-rating [rating]="4"></app-rating>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md 9">
+                    <p class="review-text">It was pretty amazing to unbox this astonishing pair of shoes, they are really treat to eyes that too in an affordable price. Just keep in mind buy one size smaller than your normal size ..Believe me you would never regret after this purchase </p>
+                    <p class="review-date">12:12 - Apr 14, 2022</p>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+</div>
+
+<section class="container" id="data-inspired" >
+    <div class="section-title">
+        <p>
+            Similar products.
+        </p>
+        <button class="btn action"> View All</button>
+    </div>
+    <div class="row justify-content-md-between">           
+        <div class="col-md-2" >
+            <app-product-card  ></app-product-card>
+        </div>
+        <div class="col-md-2" >
+            <app-product-card  ></app-product-card>
+        </div>    
+        <div class="col-md-2" >
+            <app-product-card  ></app-product-card>
+        </div>    
+        <div class="col-md-2" >
+            <app-product-card  ></app-product-card>
+        </div>    
+        <div class="col-md-2" >
+            <app-product-card  ></app-product-card>
+        </div>          
+        
+    </div>
+</section>
+
 <app-footer></app-footer>

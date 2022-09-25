@@ -18,6 +18,7 @@ import { RegisterPageComponent } from './register-page/register-page.component';
 import { CartService } from './core/cart-service/cart.service';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { ProductLongCardComponent } from './product-long-card/product-long-card.component';
+import { RatingComponent } from './shared/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { ProductLongCardComponent } from './product-long-card/product-long-card.
     RegisterPageComponent,
     CartPageComponent,
     ProductLongCardComponent,
+    RatingComponent,
     
   ],
   imports: [

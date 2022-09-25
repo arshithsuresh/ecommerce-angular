@@ -1,0 +1,17 @@
+.rating{
+    color: var(--secondary-orange);
+    display:flex;
+    flex-direction: row;
+    column-gap: 12px;
+
+    span{
+        font-size: 1.2em;
+    }
+
+    p{
+        font-size: 14px;
+        margin: 0px;
+        padding: 0px;
+        color: var(--primary-black);
+    }
+}

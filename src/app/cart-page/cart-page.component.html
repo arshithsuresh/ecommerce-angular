@@ -9,7 +9,7 @@
                 <div class="cart-empty" *ngIf="items.length==0">
                     <p>Cart is empty! Add items to card.</p>
                 </div>
-                <app-product-long-card *ngFor="let item of items"></app-product-long-card>                
+                <app-product-long-card [data]="item" *ngFor="let item of items"></app-product-long-card>                
             </div>
             
         </div>
@@ -18,18 +18,9 @@
                 <p>Order Summary</p>
             </div>
             <div class="order-summary">
-                <div class="item-details">
+                <div class="item-details" *ngFor="let item of items">
                     <p class="item-name">AIR MAX </p>
                     <p class="item-price"> <span class="currency">$</span>72</p>
-                </div>
-                <hr>
-                <div class="order-total">
-                    <div class="left-caption">
-                        <p> Order total <span>(2 items):</span></p>
-                    </div>
-                    <div class="total">
-                        <p> <span class="currency">$</span>32</p>
-                    </div>                    
                 </div>
                 <hr>
                 <div class="delivery-options">
@@ -54,13 +45,21 @@
 
                     </ul>
                 </div>
+                <hr>
+                <div class="order-total">
+                    <div class="left-caption">
+                        <p> Order total <span>(2 items):</span></p>
+                    </div>
+                    <div class="total">
+                        <p> <span class="currency">$</span>32</p>
+                    </div>                    
+                </div>                            
                 <div class="actions">
                     <button class="btn btn-primary w-100">
                         Proceed to checkout
                     </button>
                 </div>
             </div>
-            
             
         </div>
     </div>

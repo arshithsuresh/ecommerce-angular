@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CartService } from '../core/cart-service/cart.service';
 import { Product } from '../shared/product-card/product';
 
 @Component({
@@ -8,12 +9,17 @@ import { Product } from '../shared/product-card/product';
 })
 export class ProductLongCardComponent implements OnInit {
 
-  @Input('data') product:Product;
-  constructor() { 
+  @Input('data') itemData:String="";
+  product:Product;
+  constructor(private cartService:CartService) { 
     this.product = Product.getMockProduct();
   }
 
   ngOnInit(): void {
+  }
+
+  onRemoveFromCart(){
+    this.cartService.removeItemFromCart(this.itemData);
   }
 
   halfStarVisibility=()=>{

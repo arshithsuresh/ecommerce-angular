@@ -1,1 +1,59 @@
-<p>register-page works!</p>
+<header>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <div class="row flex-row  w-100">
+                <div class="col-lg-3 col-md-4 col-sm-3 left-nav">
+                    <a [routerLink]="['']" class="navbar-brand">
+                        BrandABC
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-5 col-lg-6 center-nav w-100">                         
+            </div>            
+        </div>        
+    </nav>
+</header>
+<section id="login" >
+    <div class="container login">
+        <div class="row w-100 justify-content-md-center">
+            <div class="col-md-4">                
+                <div class="login-content w-100">
+                    <h3>Register</h3>
+                    <form action="">
+                        <div class="row">
+                            <div class="col">
+                                <label for="fname">First Name</label>
+                                <input id="fname" type="text" class="form-control" placeholder="First name" aria-label="First name">
+                            </div>
+                            <div class="col">
+                                <label for="lname">Last Name</label>
+                                <input id="lname" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                            </div>
+                          </div>
+                        <div class="form-group">
+                            <label for="username">Email</label>
+                            <input type="email" class="form-control" id="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Email</label>
+                            <input type="email" class="form-control" id="username">
+                        </div>
+                        
+                        <div class="action">
+                            <button class="btn btn-primary w-100">Register</button>
+                            <hr>
+                            <span>Already have an account? <a [routerLink]="['/login']">Login</a></span>                            
+                            
+                        </div>
+                    </form>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

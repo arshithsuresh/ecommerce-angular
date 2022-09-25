@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Product } from '../shared/product-card/product';
 
 @Component({
   selector: 'app-product-page',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductPageComponent implements OnInit {
 
-  constructor() { }
+  @Input('data') product:Product;
+  constructor() {
+    this.product=Product.getMockProduct();
+  }
 
   ngOnInit(): void {
   }

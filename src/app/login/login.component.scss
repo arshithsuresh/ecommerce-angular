@@ -1,0 +1,156 @@
+header{
+    background-color: var(--primary-black);
+    min-height: 72px;
+    
+    .navbar{
+        display: flex;
+        align-items: center;
+        height: 72px;
+
+        .row{            
+            align-items: center; 
+        }
+
+        .left-nav{
+            a{
+                font-weight: 600;
+                color: white;
+                height: 72px;
+            }
+        }
+
+        .right-nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            .account-bar{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                position: relative;
+                .profile-pic{
+                    width: 32px;
+                    height: 32px;
+                    overflow: hidden;
+                    border-radius: 21px;
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                .account-dropdown{
+                         
+                    color: white;
+                    display: flex;
+                    flex-direction: column;                    
+                    justify-content: center;
+                    margin-left: 12px;
+                                                        
+                    .greetings{                        
+                        padding: 0px;
+                        font-size: 14px;
+                    }
+                    .dropdown{
+                        display: flex;
+                        flex-direction: row;                        
+                        font-weight: 600;
+                        margin-top: -4px;   
+                        cursor: pointer;                     
+                        p{                            
+                            margin:0px;                            
+                        }
+                        span{
+                            
+                            display: inline;
+                        }
+                    }
+                    
+                }
+                .dropdown-content{
+                    position: absolute;
+                    z-index: 100;                   
+                    top: 72px;                    
+                    width: 100%;
+                    color: var(--primary-black);
+                    padding-top: 12px;
+                    border-radius: 8px;
+                    box-shadow: 0px 0px 12px rgba($color: #000000, $alpha: 0.1);
+                    background-color: white;
+                    ul{
+                        list-style: none;
+                        padding: 2px;                        
+                        li{
+                            height: 42px;
+                            border-radius: 4px;
+                            padding-left: 12px; 
+                            padding-top: 8px;                                               
+                            &:hover{
+                                background-color: var(--primary-white);
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            .cart{
+                color: white;
+                position: relative;
+                padding-top: 12px;
+                cursor: pointer;
+                .cart-count{
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: -4px;
+                }
+                .cart-icon{
+                    span{
+                        font-size: 2em;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+section{
+    background-color: var(--primary-white);
+    background-image: url('/../assets/img/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 42px 0px;
+    .login{
+    
+        
+        .login-content{
+            text-align: center;
+            border-radius: 12px;
+            margin: 12px 0px;
+            background-color: white; 
+            box-shadow: 0px 0px 12px rgba($color: #000000, $alpha: 0.3);
+            padding: 8px 24px;
+            .form-group{
+                text-align: left;
+                padding: 4px 0px;
+                label{
+                    padding-left: 3px;
+                }
+            } 
+            
+            .action{
+                margin: 12px 0px;
+                button{
+                    height: 42px;
+                }
+                a{
+                    display: block;
+                    text-align: left;
+                    text-decoration: none;
+                    color: var(--primary-black);
+                }
+            }
+        }
+    }
+}

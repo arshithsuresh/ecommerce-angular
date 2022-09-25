@@ -7,7 +7,7 @@
     
     <div class="product-content">
         <div class="title">
-            <p><span>{{product.brand}}</span> - {{product.title}}</p>
+            <p><span>{{itemData}}</span> - {{product.title}}</p>
         </div>
         <div class="rating">
             <div class="rating-stars">            
@@ -34,7 +34,7 @@
             Sponsored
         </div>
         <div class="cart-actions">
-            <button class="btn btn-cart-action rounded-pill">Remove from Cart</button>            
+            <button class="btn btn-cart-action rounded-pill" (click)="onRemoveFromCart()">Remove from Cart</button>            
         </div>
     </div>
     

@@ -1,0 +1,8 @@
+<div class="rating">
+    <div class="rating-stars">            
+        <span class="material-icons" *ngFor="let index of createRange(rating)"> star</span>
+        <span class="material-icons" *ngIf="halfStarVisibility()">star_half</span>
+        <span class="material-icons" *ngFor="let index of createRange(5-rating)">star_border</span>
+    </div>    
+    <ng-content></ng-content>
+</div>
