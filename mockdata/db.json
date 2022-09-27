@@ -2,7 +2,7 @@
       "initdata":{
       "featuredproduct":[
         {
-          "productID":"pd00_001",
+          "id":"pd00_001",
           "title":"Stylish Bag",
           "rating":"4.2",
           "totalRatings":"32",
@@ -13,7 +13,7 @@
           "img":"assets/product/bag/card.jpg"          
         },
         {
-          "productID":"pd00_002",
+          "id":"pd00_002",
           "title":"Air Jordans - Limited",
           "rating":"4.5",
           "totalRatings":"1423",
@@ -24,7 +24,7 @@
           "img":"assets/product/airjordan/card.png"
         },
         {
-          "productID":"pd00_003",
+          "id":"pd00_003",
           "title":"Playstation 5 - White",
           "rating":"4.7",
           "totalRatings":"2174",
@@ -36,7 +36,7 @@
           "discountPrice":"34999"
         },
         {
-          "productID":"pd00_004",
+          "id":"pd00_004",
           "title":"Naruto Bomber Jacket",
           "rating":"3.5",
           "totalRatings":"429",
@@ -50,7 +50,7 @@
       ],
       "trendproducts":[
         {
-          "productID":"pd00_005",
+          "id":"pd00_005",
           "title":"Stylish Bag",
           "rating":"4.2",
           "totalRatings":"32",
@@ -61,7 +61,7 @@
           "img":"assets/product/iphone/card.jpg"          
         },
         {
-          "productID":"pd00_006",
+          "id":"pd00_006",
           "title":"Air Jordans - Limited",
           "rating":"4.5",
           "totalRatings":"1423",
@@ -73,7 +73,7 @@
           "discountPrice":"3499"          
         },
         {
-          "productID":"pd00_007",
+          "id":"pd00_007",
           "title":"Playstation 5 - White",
           "rating":"4.7",
           "totalRatings":"2174",
@@ -85,7 +85,7 @@
           "discountPrice":"34999"
         },
         {
-          "productID":"pd00_008",
+          "id":"pd00_008",
           "title":"Naruto Bomber Jacket",
           "rating":"3.5",
           "totalRatings":"429",
@@ -100,7 +100,7 @@
     },
     "products":[
       {
-        "productID":"pd00_001",
+        "id":"pd00_001",
         "title":"Stylish Bag",
         "rating":"4.2",
         "totalRatings":"32",
@@ -108,10 +108,35 @@
         "currentPrice":"1499",
         "sponsored":"true",
         "stock":"4",
-        "img":"assets/product/bag/card.jpg"          
+        "img":"assets/product/bag/full.jpg",
+        "reviews":[
+          {
+            "id":"10001",
+            "user":{
+              "id":100001,
+              "name":"Naruto Uzamaki",
+              "img":"assets/img/profile/naruto.png"
+            },
+            "rating":"3",
+            "review":"It was pretty amazing to unbox this astonishing pair of shoes, they are really treat to eyes that too in an affordable price. Just keep in mind buy one size smaller than your normal size ..Believe me you would never regret after this purchase",
+            "createdAt": "04/12/2022"
+          },
+          {
+            "id":"10001",
+            "user":{
+              "id":100003,
+              "name":"Kakashi Hatake",
+              "img":"assets/img/profile/kakashi.jpg"
+            },
+            "rating":"4",
+            "review":"It was pretty amazing to unbox this astonishing pair of shoes, they are really treat to eyes that too in an affordable price. Just keep in mind buy one size smaller than your normal size ..Believe me you would never regret after this purchase",
+            "createdAt": "04/12/2022"
+          }
+        ],
+        "description":"Air Jordan 1 Mid brings full-court style and premium comfort to an iconic look. Its Air-Sole unit cushions play on the hardwood, while the padded collar gives you a supportive feel. Colour Shown: Black/White/Particle Grey Style: BQ6472-007"       
       },
       {
-        "productID":"pd00_002",
+        "id":"pd00_002",
         "title":"Air Jordans - Limited",
         "rating":"4.5",
         "totalRatings":"1423",
@@ -122,7 +147,7 @@
         "img":"assets/product/airjordan/card.png"
       },
       {
-        "productID":"pd00_003",
+        "id":"pd00_003",
         "title":"Playstation 5 - White",
         "rating":"4.7",
         "totalRatings":"2174",
@@ -134,7 +159,7 @@
         "discountPrice":"34999"
       },
       {
-        "productID":"pd00_004",
+        "id":"pd00_004",
         "title":"Naruto Bomber Jacket",
         "rating":"3.5",
         "totalRatings":"429",
@@ -146,7 +171,7 @@
         "discountPrice":"1299"
       },
       {
-        "productID":"pd00_005",
+        "id":"pd00_005",
         "title":"Stylish Bag",
         "rating":"4.2",
         "totalRatings":"32",
@@ -157,7 +182,7 @@
         "img":"assets/product/iphone/card.jpg"          
       },
       {
-        "productID":"pd00_006",
+        "id":"pd00_006",
         "title":"Air Jordans - Limited",
         "rating":"4.5",
         "totalRatings":"1423",
@@ -166,10 +191,11 @@
         "sponsored":"true",
         "stock":"3",
         "img":"assets/product/headset/card.png",
-        "discountPrice":"3499"          
+        "discountPrice":"3499",
+        "description":"very good shoes"        
       },
       {
-        "productID":"pd00_007",
+        "id":"pd00_007",
         "title":"Playstation 5 - White",
         "rating":"4.7",
         "totalRatings":"2174",
@@ -181,7 +207,7 @@
         "discountPrice":"34999"
       },
       {
-        "productID":"pd00_008",
+        "id":"pd00_008",
         "title":"Naruto Bomber Jacket",
         "rating":"3.5",
         "totalRatings":"429",

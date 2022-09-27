@@ -1,6 +1,8 @@
+import { Review } from "./reviews";
+
 export class Product {
     constructor(
-        public productID:string,
+        public id:string,
         public title:string,        
         public rating:number,
         public totalRatings:number,        
@@ -9,7 +11,9 @@ export class Product {
         public sponsored:boolean,
         public stock:number,
         public img:String,        
-        public discountPrice?:number
+        public discountPrice?:number,
+        public description?:string,
+        public reviews?: Review[]
     ){}
 
     public static getMockProduct():Product{

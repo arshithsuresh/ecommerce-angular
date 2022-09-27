@@ -2,10 +2,10 @@
     <div class="sponsored" [ngClass]="{'d-none':!product.sponsored}">
         Sponsored
     </div>
-    <div class="product-img" [routerLink]="['product',product.productID]">
+    <div class="product-img" [routerLink]="['product',product.id]">
         <img [src]="product.img" alt="">
     </div>
-    <div class="title" [routerLink]="['product',product.productID]">
+    <div class="title" [routerLink]="['product',product.id]">
         <p><span>{{product.brand}}</span> - {{product.title}}</p>
     </div>
     <app-rating [rating]="product.rating"><p class="count">{{product.totalRatings}}</p></app-rating>

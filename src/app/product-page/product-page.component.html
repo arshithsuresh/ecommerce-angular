@@ -22,7 +22,7 @@
     <div class="row">
         <div class="col-md-6 images">
             <div class="product-main-image">
-                <img src="assets/product/bag/full.jpg" alt="">
+                <img [src]="product.img" alt="">
             </div>
             <div class="product-images">
                 <div class="image-icon">
@@ -38,13 +38,13 @@
         </div>
         <div class="col-md-6 details">
             <div class="brand-title">
-                <p>By <span>Nike</span></p>
+                <p>By <span>{{product.brand}}</span></p>
             </div>
             <div class="product-title">
-                <h3>Nike High Dunks</h3>
+                <h3>{{product.title}}</h3>
             </div>
-            <app-rating class="rating" [rating]="4.4">
-                <span>120 ratings</span>                
+            <app-rating class="rating" [rating]="product.rating">
+                <span>{{product.totalRatings}} ratings</span>                
             </app-rating>
 
             <div class="price-tag">
@@ -91,9 +91,12 @@
             </div>
             <div class="description">
                 <p>
-                    The Air Jordan 1 Mid brings full-court style and premium comfort to an iconic look. Its Air-Sole unit cushions play on the hardwood, while the padded collar gives you a supportive feel.
-                    Colour Shown: Black/White/Particle Grey Style: BQ6472-007
+                    {{product.description}}
                 </p>
+            </div>
+            <div class="product-actions">
+                <button class="btn btn-primary rounded-pill">Buy Now</button>
+                <button class="btn btn-cart rounded-pill" (click)="onAddToCart()">Add to Cart</button>
             </div>
         </div>
     </div>
@@ -152,44 +155,41 @@
                 
             </div>
         </div>
+       
+        <!-- Rating Viewer-->
         <div class="col-md-8">
-            <div class="row rating-description">
-                <div class="col-md-3">
-                    <div class="user-profile">
-                        <div class="image">
-                            <img src="assets/img/profile/naruto.png" alt="">
-                        </div>
-                        <div class="user-details">
-                            <p>John Lucas</p>
-                            <app-rating [rating]="4"></app-rating>
-                        </div>
-                    </div>
+            <div class="add-review">
+                <div class="add-rating">
+                    <span>Rating :</span>
+                    <button #star class="btn star" ><span class="material-icons" (click)="addRating(1)"> </span></button>
+                    <button #star class="btn star" ><span class="material-icons" (click)="addRating(2)"> </span></button>
+                    <button #star class="btn star" ><span class="material-icons" (click)="addRating(3)"> </span></button>
+                    <button #star class="btn star" ><span class="material-icons" (click)="addRating(4)"> </span></button>
+                    <button #star class="btn star" ><span class="material-icons" (click)="addRating(5)"> </span></button>
                 </div>
-                <div class="col-md 9">
-                    <p class="review-text">It was pretty amazing to unbox this astonishing pair of shoes, they are really treat to eyes that too in an affordable price. Just keep in mind buy one size smaller than your normal size ..Believe me you would never regret after this purchase </p>
-                    <p class="review-date">12:12 - Apr 14, 2022</p>
-                </div>
+                <textarea class="w-100 form-control" style="resize: none;" rows="4"></textarea>
+                <button class="btn btn-primary rounded-pill w-25"> Submit</button>
             </div>
-            <div class="row rating-description">
-                <div class="col-md-3">
-                    <div class="user-profile">
-                        <div class="image">
-                            <img src="assets/img/profile/naruto.png" alt="">
-                        </div>
-                        <div class="user-details">
-                            <p>John Lucas</p>
-                            <app-rating [rating]="4"></app-rating>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md 9">
-                    <p class="review-text">It was pretty amazing to unbox this astonishing pair of shoes, they are really treat to eyes that too in an affordable price. Just keep in mind buy one size smaller than your normal size ..Believe me you would never regret after this purchase </p>
-                    <p class="review-date">12:12 - Apr 14, 2022</p>
-                </div>
-            </div>
-
             
+            <div *ngFor="let review of product.reviews" class="row rating-description">
+                <div class="col-md-3">
+                    <div class="user-profile">
+                        <div class="image">
+                            <img [src]="review.user.img" alt="">
+                        </div>
+                        <div class="user-details">
+                            <p>{{review.user.name}}</p>
+                            <app-rating [rating]="review.rating"></app-rating>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md 9">
+                    <p class="review-text">{{review.review}}</p>
+                    <p class="review-date">{{review.createdAt|date:'EEEE, MMMM d, y' }}</p>
+                </div>
+            </div>                        
         </div>
+        <!-- Rating Viewer Ends-->
     </div>
 
 </div>

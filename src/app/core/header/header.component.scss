@@ -16,6 +16,12 @@ header{
         }
 
         .center-nav{
+
+            @media (max-width: 576px)
+            {
+                
+            }
+
             .search-bar
             {
                 display: flex;
@@ -96,7 +102,8 @@ header{
                 .dropdown-content{
                     position: absolute;
                     z-index: 100;                   
-                    top: 72px;                    
+                    top: 72px;       
+                    min-width: 200px;             
                     width: 100%;
                     color: var(--primary-black);
                     padding-top: 12px;

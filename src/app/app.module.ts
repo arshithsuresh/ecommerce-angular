@@ -19,6 +19,8 @@ import { CartService } from './core/cart-service/cart.service';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { ProductLongCardComponent } from './product-long-card/product-long-card.component';
 import { RatingComponent } from './shared/rating/rating.component';
+import { ModalDisplayComponent } from './modal-display/modal-display.component';
+import { ErrorManagementComponent } from './error-management/error-management.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { RatingComponent } from './shared/rating/rating.component';
     CartPageComponent,
     ProductLongCardComponent,
     RatingComponent,
+    ModalDisplayComponent,
+    ErrorManagementComponent,
     
   ],
   imports: [
