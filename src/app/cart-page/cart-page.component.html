@@ -20,7 +20,7 @@
             <div class="order-summary">
                 <div class="item-details" *ngFor="let item of items">
                     <p class="item-name">AIR MAX </p>
-                    <p class="item-price"> <span class="currency">$</span>72</p>
+                    <p class="item-price"> <span class="currency">&#x20B9;</span>72</p>
                 </div>
                 <hr>
                 <div class="delivery-options">
@@ -31,7 +31,7 @@
                                 <input type="radio" name="delivery" id="delivery" value="0" checked> 2 day delivery
                             </div>
                             <div class="cost">
-                                <p><span class="currency"></span> 6</p>
+                                <p><span class="currency"> &#x20B9; </span> 6</p>
                             </div>                            
                         </li>
                         <li>
@@ -51,12 +51,29 @@
                         <p> Order total <span>(2 items):</span></p>
                     </div>
                     <div class="total">
-                        <p> <span class="currency">$</span>32</p>
-                    </div>                    
+                        <p> <span class="currency">&#x20B9;</span>32</p>
+                    </div>    
+                                 
+                </div>
+                <hr>   
+                <div class="payment-method">
+                    <p class="title">Choose delivery type</p>
+                    <ul>
+                        <li>
+                            <div class="type">
+                                <input type="radio" name="payment" id="payment" value="0" checked> UPI Delivery
+                            </div>                                                                                 
+                        </li>
+                        <li>
+                            <div class="type">
+                                <input type="radio" name="payment" id="payment" value="1" checked> Paytm
+                            </div>   
+                        </li>
+                    </ul>
                 </div>                            
-                <div class="actions">
+                <div class="actions">                    
                     <button class="btn btn-primary w-100">
-                        Proceed to checkout
+                        Proceed to Buy
                     </button>
                 </div>
             </div>

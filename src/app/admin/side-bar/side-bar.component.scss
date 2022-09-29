@@ -1,0 +1,13 @@
+.main{
+    margin-top: 56px;
+    display: flex;
+    flex-wrap: nowrap;
+    height: calc(100vh - 56px);
+    min-height: 400px;    
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: fixed;
+    width: 20%;
+    max-width: 250px;
+}

@@ -30,6 +30,13 @@
         background-color: var(--primary-white);
         padding: 36px 18px;
         margin-bottom: 42px;
+
+        .title{
+            font-weight: 900;
+            margin-bottom: 4px;
+            
+        }
+
         .currency{
             margin-right: 4px;
             font-size: 0.7em;
@@ -71,18 +78,24 @@
             .total{
                 p{
                     font-weight: bold;
-                    font-size: 1.6em;                    
+                    font-size: 1.6em;    
+                    margin: 0px;                
                 }
             }
         }
         .delivery-options{
             p{
                 margin: 4px 0px;
+            }            
+            ul{
+                list-style-type: none;
+                li{
+                    display: flex;
+                    justify-content: space-between;
+                }
             }
-            .title{
-                font-weight: 900;
-                margin-bottom: 4px;
-            }
+        }
+        .payment-method{
             ul{
                 list-style-type: none;
                 li{

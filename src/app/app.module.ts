@@ -21,6 +21,7 @@ import { ProductLongCardComponent } from './product-long-card/product-long-card.
 import { RatingComponent } from './shared/rating/rating.component';
 import { ModalDisplayComponent } from './modal-display/modal-display.component';
 import { ErrorManagementComponent } from './error-management/error-management.component';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [
@@ -28,8 +29,7 @@ import { ErrorManagementComponent } from './error-management/error-management.co
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    LoginComponent,
-    ProductCardComponent,
+    LoginComponent,    
     ProductCarouselComponent,
     ProductOffersComponent,
     BrandOffersComponent,
@@ -38,15 +38,14 @@ import { ErrorManagementComponent } from './error-management/error-management.co
     RegisterPageComponent,
     CartPageComponent,
     ProductLongCardComponent,
-    RatingComponent,
-    ModalDisplayComponent,
-    ErrorManagementComponent,
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    AdminModule    
+  ],
+  exports:[     
   ],
   providers: [CartService],
   bootstrap: [AppComponent]

@@ -1,0 +1,69 @@
+<div class="col body">        
+    <div class="row m-3">
+        <h4>Create New Product</h4>
+        <form class="row d-flex flex-column g-3 needs-validation">
+            <div class="col-md-6">
+                <label for="validationCustom01" class="form-label">Title</label>
+                <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationTextarea" class="form-label">Product description</label>
+                <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" rows="4" style="resize: none;" required></textarea>
+                <div class="invalid-feedback">
+                  Please enter a message in the textarea.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustom01" class="form-label">Price</label>
+                <input type="number" class="form-control" id="validationCustom01" value="Mark" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+            </div>
+            <div class="row mt-3 p-0 m-0">                    
+                <div class="col-md-3 p-2">
+                    <label for="validationCustom04" class="form-label">Category</label>
+                    <select class="form-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Shoes</option>
+                        <option>Smartphone</option>
+                        <option>Cloths</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                </div>
+                <div class="col-md-3 p-2">
+                    <label for="validationCustom04" class="form-label">Brand</label>
+                    <select class="form-select" id="validationCustom04" required>
+                        <option selected disabled value="">Choose...</option>
+                        <option>Nike</option>
+                        <option>Adidas</option>
+                        <option>Vitas</option>
+                        <option>Apple</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid state.
+                    </div>
+                </div>                             
+            </div>
+            <div class="col-md-6">
+                <label for="card_image">Select Card Image</label>
+                <div class="mb-3">
+                    <input name="card" id="card_image" type="file" class="form-control form-control">
+                </div>
+                <label for="card_image">Select Main Image</label>
+                <div class="mb-3">
+                    <input name="main" id="card_image" type="file" class="form-control form-control">
+                </div>
+                <label for="card_image">Image 1</label>
+                <div class="mb-3">
+                    <input name="card" id="card_image" type="file" class="form-control form-control">
+                </div>
+            </div>   
+        </form>
+    </div>
+</div>
